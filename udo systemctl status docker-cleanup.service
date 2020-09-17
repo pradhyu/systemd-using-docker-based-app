@@ -1,0 +1,6 @@
+[0;1;32m●[0m docker-cleanup.timer - Docker cleanup timer
+   Loaded: loaded (/etc/systemd/system/docker-cleanup.timer; disabled; vendor preset: disabled)
+   Active: [0;1;32mactive (elapsed)[0m since Wed 2020-09-16 21:23:06 EDT; 2min 26s ago
+  Trigger: n/a
+
+Sep 16 21:23:06 centos8.linuxvmimages.com systemd[1]: Started Docker cleanup timer.

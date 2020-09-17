@@ -15,8 +15,15 @@ sudo systemctl daemon-reload
 #start timer service
 sudo systemctl status docker-cleanup.timer
 sudo systemctl status docker-cleanup.service
-
-sudo systemctl stop docker-cleanup.timer
+# sudo systemctl disabled docker-cleanup.service
+# the service needs to be enabled to start with timer
+# timer controls the execution of the service 
+# OnUnitInactiveSec means when since the last time it got stopped
+# doesn't matter if you start or stop the service the timer continues from last time it got inactive
+# sudo systemctl disable docker-cleanup.service
+# sudo systemctl start docker-cleanup.service
+# sudo systemctl stop docker-cleanup.service
+sudo systemctl enable docker-cleanup.timer
 sudo systemctl start docker-cleanup.timer
 
 
