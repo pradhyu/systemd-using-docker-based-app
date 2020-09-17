@@ -1,0 +1,13 @@
+[Unit]
+Description=%i service with docker compose
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/docker-compose -p docker-app -f /home/centos/git/systemd-practise/docker-compose-based-service/docker-compose.yml up -d
+ExecStop=/usr/bin/docker-compose -p docker-app -f /home/centos/git/systemd-practise/docker-compose-based-service/docker-compose.yml down
+
+[Install]
+WantedBy=multi-user.target

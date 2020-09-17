@@ -1,0 +1,13 @@
+[Unit]
+Description=Docker cleanup
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/tmp
+User=root
+ExecStart=/usr/bin/docker system prune -af --volumes
+
+[Install]
+WantedBy=multi-user.target

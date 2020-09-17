@@ -1,0 +1,13 @@
+[0;1;31mWarning:[0m The unit file, source configuration file or drop-ins of docker-cleanup.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+[0;1;31m●[0m docker-cleanup.service - Docker cleanup
+   Loaded: loaded (/etc/systemd/system/docker-cleanup.service; disabled; vendor preset: disabled)
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Wed 2020-09-16 21:11:59 EDT; 8s ago
+  Process: 7184 ExecStart=/usr/bin/docker system prune -af --volume [0;1;31m(code=exited, status=125)[0m
+ Main PID: 7184 (code=exited, status=125)
+
+Sep 16 21:11:58 centos8.linuxvmimages.com systemd[1]: Starting Docker cleanup...
+Sep 16 21:11:59 centos8.linuxvmimages.com docker[7184]: unknown flag: --volume
+Sep 16 21:11:59 centos8.linuxvmimages.com docker[7184]: See 'docker system prune --help'.
+Sep 16 21:11:59 centos8.linuxvmimages.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker-cleanup.service: Main process exited, code=exited, status=125/n/a[0m
+Sep 16 21:11:59 centos8.linuxvmimages.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mdocker-cleanup.service: Failed with result 'exit-code'.[0m
+Sep 16 21:11:59 centos8.linuxvmimages.com systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker cleanup.[0m
